@@ -1,0 +1,109 @@
+/*================================
+GALLERY SECTION ANIMATION
+====================================*/
+p{
+	font-weight: 300;
+	line-height: 30px;
+	padding-bottom: 15px:
+}
+/*--p doesn't need a . because it isn't a class, 
+font weight it how bold, line height in px  
+padding bottom-- don't want it to ever go to the bottom--*/
+
+.photo {
+	position: relative;
+	line-height: 0;
+	margin-bottom: 2cm;/* for the outside of the element*?
+	overflow: hidden;
+	border-radius: 8px;
+	padding: 1px;/* for the inside of the element*/
+	overflow: hidden;
+	border-radius: 8px;
+	padding: 1px;
+	border: 1px solid #021a40;
+	background-color: #ff0;
+	box-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+}
+/*--- position is relative to container-- not absolute
+margin-- could have done all four, but by putting one means that all 4 will be )
+overflow hides the anything over the edge
+border radius rounds the corners
+border, size, style and color
+ */
+.photo-container{
+	text-align: center;
+	margin: 15px auto; /*auto is centering*/
+	width: 300px;
+	height: 169 px;
+	/*--  margin first value is top and bottom, second value auto is centering
+	height and width are the true value of the picture size-- could do percent, 
+	but that would be relative to the screen--*/
+	
+}
+
+.photo-container img {
+	max-width: 100%;
+	width: 300px;
+	height; 169px;
+	/*-- this relate only to the image in the photo-container
+	max width is 100% because already defined above
+	putting max and min infront of-- means don't ever
+	get any smaller or larger*/
+	
+}
+.photo-overlay { /*  the clear overlay with text*/
+	color: #fff;
+	position: absolute; /* go exactly where I define below*/
+
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding-left: 20px;
+	padding-right: 20px;
+	justify-content: center; /* for centering text inside photo*/
+	align-items: center;
+	background: rgba(0,0,0,.5);
+}
+	
+.white-head { /* by giving a class name-- it will affect only this section-- 
+not all h3 in the program*/
+	color: #c9BDAA;
+	margin-top: 5%;
+	line-height: 30px;
+	padding-bottom: 20px;
+}
+/*============================
+Photo overlay transitions
+===============================*/
+
+.photo-overlay {
+	opacity: 0;
+	transition: opacity .1s; /* how much time it will take*/
+	border-radius: 10px;
+	cursor: pointer;
+}
+.photo-overlay p {
+	width: 100%;
+	height: 100%;
+	color: #fff;
+}
+.photo-overlay:hover {
+	opacity: 1; /* allows the hover to make text solid.  
+	The above transitions gives a time*/
+}
+.photo img {
+	transition: transform .5s;
+	transform-orignal: 50% 50%; /*changes the angle-- in this case
+	it is straight dead on*//
+}
+
+.photo:hover img {
+	transform: scale(1.1); /* the timing was defined above*/
+	
+}
+	
+
+	
+	
+	
